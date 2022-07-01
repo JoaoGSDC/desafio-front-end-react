@@ -1,20 +1,19 @@
 import React from "react";
+import { Provider } from "react-redux";
+import store from "./store";
+
+import { GlobalStyle } from "./styles";
+
+import Routes from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-      <h1>teste</h1>
-    </div>
+    <>
+      <Provider store={store}>
+        <GlobalStyle />
+        <Routes />
+      </Provider>
+    </>
   );
 }
 
